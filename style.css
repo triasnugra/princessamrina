@@ -49,11 +49,19 @@ h1 {
 }
 
 .menu-item {
+  display: inline-block;
+  text-decoration: none;
+  color: #005bac;
+  background-color: #e8f0ff;
   width: 60px;
   padding: 10px;
-  background-color: #e8f0ff;
+  text-align: center;
   border-radius: 10px;
   font-size: 12px;
+}
+
+.menu-item:hover {
+  background-color: #cce4ff;
 }
 
 .actions {
