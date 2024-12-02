@@ -1,3 +1,4 @@
+/* Styling Utama */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -83,3 +84,65 @@ h1 {
   color: white;
 }
 
+/* Media Queries untuk Responsivitas */
+
+/* Untuk layar dengan lebar maksimum 768px (tablet dan handphone) */
+@media (max-width: 768px) {
+  .container {
+    width: 90%; /* Lebar lebih fleksibel */
+    margin: auto;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 18px; /* Perkecil ukuran font pada judul */
+  }
+
+  .menu {
+    flex-direction: column; /* Susun menu secara vertikal */
+    gap: 10px; /* Tambahkan jarak antar item menu */
+  }
+
+  .menu-item {
+    width: 100%; /* Lebar penuh */
+    padding: 15px; /* Ukuran padding lebih besar */
+    font-size: 14px; /* Ukuran font lebih besar */
+  }
+
+  .promo-img {
+    width: 100%; /* Banner tetap penuh lebar */
+  }
+
+  .actions {
+    flex-direction: column; /* Susun tombol secara vertikal */
+  }
+
+  .login-btn {
+    width: 100%; /* Lebar penuh */
+    padding: 12px; /* Tambahkan padding */
+  }
+}
+
+/* Untuk layar dengan lebar maksimum 480px (handphone kecil) */
+@media (max-width: 480px) {
+  .header {
+    padding: 10px; /* Kurangi padding pada header */
+  }
+
+  .logo {
+    width: 60px; /* Perkecil ukuran logo */
+  }
+
+  h1 {
+    font-size: 16px; /* Ukuran font lebih kecil */
+  }
+
+  .menu-item {
+    font-size: 12px; /* Ukuran teks lebih kecil */
+    padding: 10px; /* Padding lebih kecil */
+  }
+
+  .login-btn {
+    font-size: 14px; /* Ukuran font tombol lebih kecil */
+  }
+}
