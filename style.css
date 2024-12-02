@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.header {
+  background-color: #005bac;
+  color: white;
+  padding: 20px;
+}
+
+.logo {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.content {
+  padding: 20px;
+}
+
+.promo {
+  margin: 20px 0;
+}
+
+.promo-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.menu-item {
+  width: 60px;
+  padding: 10px;
+  background-color: #e8f0ff;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.login-btn, .fingerprint-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-btn {
+  background-color: #005bac;
+  color: white;
+}
+
+.fingerprint-btn {
+  background-color: #f0f0f0;
+}
