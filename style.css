@@ -43,13 +43,10 @@ h1 {
   border-radius: 10px;
 }
 
-/* Styling Menu */
 .menu {
-  display: flex; /* Mengatur layout fleksibel */
-  flex-wrap: nowrap; /* Tidak memindahkan elemen ke baris baru */
-  overflow-x: auto; /* Mendukung scroll horizontal */
-  gap: 10px; /* Tambahkan jarak antar item */
-  padding: 10px 0; /* Tambahkan padding atas dan bawah */
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
 }
 
 .menu-item {
@@ -57,12 +54,11 @@ h1 {
   text-decoration: none;
   color: #005bac;
   background-color: #e8f0ff;
-  min-width: 100px; /* Ukuran minimum untuk tombol */
+  width: 60px;
   padding: 10px;
   text-align: center;
   border-radius: 10px;
   font-size: 12px;
-  flex: 0 0 auto; /* Mencegah item membentang */
 }
 
 .menu-item:hover {
@@ -103,7 +99,8 @@ h1 {
   }
 
   .menu {
-    gap: 10px; /* Tambahkan jarak antar item */
+    flex-direction: column; /* Susun menu secara vertikal */
+    gap: 10px; /* Tambahkan jarak antar item menu */
   }
 
   .menu-item {
@@ -140,17 +137,9 @@ h1 {
     font-size: 16px; /* Ukuran font lebih kecil */
   }
 
-  .menu {
-    flex-direction: column; /* Susun secara vertikal */
-    overflow-x: unset; /* Matikan scroll horizontal */
-    gap: 10px; /* Tambahkan jarak antar item */
-  }
-
   .menu-item {
     font-size: 12px; /* Ukuran teks lebih kecil */
     padding: 10px; /* Padding lebih kecil */
-    width: 100%; /* Lebar penuh */
-    text-align: center; /* Tengah-tengah */
   }
 
   .login-btn {
