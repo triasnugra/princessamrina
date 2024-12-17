@@ -100,13 +100,22 @@ h1 {
     display: none; /* Sembunyikan scrollbar di Chrome/Safari */
   }
 
-  .menu-item {
-    flex: 0 0 auto; /* Kolom fleksibel sesuai konten */
-    margin-right: 10px; /* Jarak antar item */
-    width: auto; /* Lebar sesuai teks */
-    white-space: nowrap; /* Hindari teks terpotong */
-    font-size: 12px; /* Ukuran teks tetap kecil */
-  }
+.menu-item {
+  flex: 0 0 auto; /* Ukuran sesuai konten */
+  margin-right: 10px; /* Jarak antar item */
+  padding: 8px 12px; /* Tambahkan padding horizontal agar teks tidak terpotong */
+  width: auto; /* Lebar otomatis mengikuti konten */
+  white-space: nowrap; /* Hindari teks turun ke baris baru */
+  font-size: 12px; /* Ukuran teks */
+  text-decoration: none; /* Hilangkan garis bawah */
+  color: #005bac; /* Warna teks */
+  background-color: #e8f0ff; /* Warna latar belakang */
+  border-radius: 10px; /* Sudut melengkung */
+  box-sizing: border-box; /* Pastikan padding tidak mempengaruhi ukuran total */
+}
+
+.menu-item:hover {
+  background-color: #cce4ff; /* Efek hover */
 }
 
 /* Untuk layar dengan lebar maksimum 480px (handphone kecil) */
