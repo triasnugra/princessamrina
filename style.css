@@ -88,61 +88,46 @@ h1 {
 
 /* Untuk layar dengan lebar maksimum 768px (tablet dan handphone) */
 @media (max-width: 768px) {
-  .container {
-    width: 90%; /* Lebar lebih fleksibel */
-    margin: auto;
-    padding: 10px;
-  }
-
-  h1 {
-    font-size: 18px; /* Perkecil ukuran font pada judul */
-  }
-
   .menu {
-    flex-direction: column; /* Susun menu secara vertikal */
-    gap: 10px; /* Tambahkan jarak antar item menu */
+    display: flex; /* Gunakan flexbox untuk tata letak horizontal */
+    flex-wrap: nowrap; /* Tidak membungkus ke baris baru */
+    overflow-x: auto; /* Aktifkan geser horizontal */
+    scrollbar-width: none; /* Sembunyikan scrollbar di Firefox */
+    -ms-overflow-style: none; /* Sembunyikan scrollbar di IE */
+  }
+
+  .menu::-webkit-scrollbar {
+    display: none; /* Sembunyikan scrollbar di Chrome/Safari */
   }
 
   .menu-item {
-    width: 100%; /* Lebar penuh */
-    padding: 15px; /* Ukuran padding lebih besar */
-    font-size: 14px; /* Ukuran font lebih besar */
-  }
-
-  .promo-img {
-    width: 100%; /* Banner tetap penuh lebar */
-  }
-
-  .actions {
-    flex-direction: column; /* Susun tombol secara vertikal */
-  }
-
-  .login-btn {
-    width: 100%; /* Lebar penuh */
-    padding: 12px; /* Tambahkan padding */
+    flex: 0 0 auto; /* Kolom fleksibel sesuai konten */
+    margin-right: 10px; /* Jarak antar item */
+    width: auto; /* Lebar sesuai teks */
+    white-space: nowrap; /* Hindari teks terpotong */
+    font-size: 12px; /* Ukuran teks tetap kecil */
   }
 }
 
 /* Untuk layar dengan lebar maksimum 480px (handphone kecil) */
 @media (max-width: 480px) {
-  .header {
-    padding: 10px; /* Kurangi padding pada header */
+  .menu {
+    display: flex; /* Sama seperti di tablet */
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
 
-  .logo {
-    width: 60px; /* Perkecil ukuran logo */
-  }
-
-  h1 {
-    font-size: 16px; /* Ukuran font lebih kecil */
+  .menu::-webkit-scrollbar {
+    display: none;
   }
 
   .menu-item {
-    font-size: 12px; /* Ukuran teks lebih kecil */
-    padding: 10px; /* Padding lebih kecil */
-  }
-
-  .login-btn {
-    font-size: 14px; /* Ukuran font tombol lebih kecil */
+    flex: 0 0 auto;
+    margin-right: 8px; /* Jarak antar item lebih kecil */
+    width: auto;
+    white-space: nowrap;
+    font-size: 11px; /* Sedikit lebih kecil di layar kecil */
   }
 }
