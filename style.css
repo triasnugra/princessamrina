@@ -90,36 +90,34 @@ h1 {
 @media (max-width: 768px) {
 .menu {
   display: flex; /* Flexbox untuk layout horizontal */
-  justify-content: space-around; /* Distribusi item dengan jarak merata */
-  flex-wrap: nowrap; /* Pastikan item tidak pindah ke baris baru */
-  overflow-x: auto; /* Scroll horizontal jika tidak muat di layar */
-  scrollbar-width: none; /* Sembunyikan scrollbar di Firefox */
-  -ms-overflow-style: none; /* Sembunyikan scrollbar di IE */
+  flex-wrap: nowrap; /* Tetap dalam satu baris */
+  overflow-x: auto; /* Scroll horizontal jika tidak muat */
+  scrollbar-width: none; /* Hilangkan scrollbar di Firefox */
+  -ms-overflow-style: none; /* Hilangkan scrollbar di IE/Edge */
 }
 
 .menu::-webkit-scrollbar {
-  display: none; /* Sembunyikan scrollbar di Chrome/Safari */
+  display: none; /* Hilangkan scrollbar di Chrome/Safari */
 }
 
 .menu-item {
-  flex: 1 1 0; /* Distribusi ukuran item sama rata */
-  max-width: 100px; /* Lebar maksimum item menu */
-  text-align: center; /* Pusatkan teks */
-  padding: 10px 0; /* Tambahkan padding vertikal */
-  margin: 0 5px; /* Beri jarak antar item */
+  flex: 0 0 120px; /* Lebar tetap untuk semua item */
+  margin: 5px; /* Jarak antar item */
+  padding: 10px 0; /* Padding vertikal yang proporsional */
+  text-align: center; /* Teks di tengah */
   text-decoration: none; /* Hilangkan garis bawah */
   color: #005bac; /* Warna teks */
   background-color: #e8f0ff; /* Warna latar belakang */
   border-radius: 10px; /* Sudut melengkung */
-  font-size: 14px; /* Ukuran teks */
-  white-space: nowrap; /* Hindari teks turun ke baris berikutnya */
-  box-sizing: border-box; /* Pastikan padding tidak memengaruhi ukuran */
-  overflow: hidden; /* Pastikan teks tidak keluar */
+  font-size: 14px; /* Ukuran font yang pas */
+  white-space: nowrap; /* Mencegah teks turun ke baris baru */
+  box-sizing: border-box; /* Padding masuk dalam total ukuran */
 }
 
 .menu-item:hover {
   background-color: #cce4ff; /* Efek hover */
 }
+
 
 
 /* Untuk layar dengan lebar maksimum 480px (handphone kecil) */
