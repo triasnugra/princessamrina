@@ -88,22 +88,10 @@ h1 {
 
 /* Untuk layar dengan lebar maksimum 768px (tablet dan handphone) */
 @media (max-width: 768px) {
-  .menu {
-    display: flex; /* Gunakan flexbox untuk tata letak horizontal */
-    flex-wrap: nowrap; /* Tidak membungkus ke baris baru */
-    overflow-x: auto; /* Aktifkan geser horizontal */
-    scrollbar-width: none; /* Sembunyikan scrollbar di Firefox */
-    -ms-overflow-style: none; /* Sembunyikan scrollbar di IE */
-  }
-
-  .menu::-webkit-scrollbar {
-    display: none; /* Sembunyikan scrollbar di Chrome/Safari */
-  }
-
 .menu {
   display: flex; /* Flexbox untuk tata letak horizontal */
-  flex-wrap: nowrap; /* Pastikan elemen tetap dalam satu baris */
-  overflow-x: auto; /* Aktifkan scroll horizontal */
+  flex-wrap: nowrap; /* Hindari pembungkusan item ke baris baru */
+  overflow-x: auto; /* Aktifkan geser horizontal */
   scrollbar-width: none; /* Sembunyikan scrollbar di Firefox */
   -ms-overflow-style: none; /* Sembunyikan scrollbar di IE */
 }
@@ -113,23 +101,25 @@ h1 {
 }
 
 .menu-item {
-  flex: 0 0 auto; /* Ukuran fleksibel sesuai konten */
+  display: inline-block; /* Hindari pemotongan teks */
+  flex: none; /* Nonaktifkan perubahan ukuran otomatis */
   margin-right: 10px; /* Jarak antar item */
-  padding: 8px 12px; /* Ruang kiri dan kanan untuk teks */
-  min-width: fit-content; /* Pastikan cukup lebar untuk teks */
+  padding: 8px 12px; /* Ruang tambahan untuk teks */
+  min-width: auto; /* Biarkan elemen fleksibel */
   text-decoration: none; /* Hilangkan garis bawah */
   color: #005bac; /* Warna teks */
   background-color: #e8f0ff; /* Warna latar belakang */
   border-radius: 10px; /* Sudut melengkung */
   font-size: 14px; /* Ukuran teks */
-  white-space: nowrap; /* Teks tetap dalam satu baris */
-  box-sizing: border-box; /* Padding masuk dalam total ukuran elemen */
-  overflow: visible; /* Hindari teks terpotong */
+  white-space: nowrap; /* Hindari pemotongan teks */
+  box-sizing: border-box; /* Padding termasuk dalam ukuran elemen */
+  overflow: visible; /* Tampilkan seluruh teks */
 }
 
 .menu-item:hover {
   background-color: #cce4ff; /* Efek hover */
 }
+
 
 
 
