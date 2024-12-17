@@ -103,20 +103,22 @@ h1 {
 .menu-item {
   flex: 0 0 auto; /* Ukuran sesuai konten */
   margin-right: 10px; /* Jarak antar item */
-  padding: 8px 12px; /* Tambahkan padding horizontal agar teks tidak terpotong */
-  width: auto; /* Lebar otomatis mengikuti konten */
-  white-space: nowrap; /* Hindari teks turun ke baris baru */
+  padding: 8px 16px; /* Padding kiri dan kanan ditambah */
+  min-width: fit-content; /* Pastikan lebar sesuai konten */
+  white-space: nowrap; /* Hindari teks turun ke baris berikutnya */
   font-size: 12px; /* Ukuran teks */
   text-decoration: none; /* Hilangkan garis bawah */
   color: #005bac; /* Warna teks */
   background-color: #e8f0ff; /* Warna latar belakang */
   border-radius: 10px; /* Sudut melengkung */
-  box-sizing: border-box; /* Pastikan padding tidak mempengaruhi ukuran total */
+  overflow: visible; /* Pastikan teks tidak terpotong */
+  box-sizing: border-box; /* Padding masuk dalam total ukuran elemen */
 }
 
 .menu-item:hover {
   background-color: #cce4ff; /* Efek hover */
 }
+
 
 /* Untuk layar dengan lebar maksimum 480px (handphone kecil) */
 @media (max-width: 480px) {
