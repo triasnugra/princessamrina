@@ -140,12 +140,12 @@ h1 {
   }
 
   .menu-item {
-    font-size: 10px; /* Ukuran teks lebih kecil */
-    padding: 8px; /* Padding lebih kecil */
+    font-size: 8px; /* Ukuran teks lebih kecil */
+    padding: 6px; /* Padding lebih kecil */
   }
 
   .login-btn {
-    font-size: 12px; /* Ukuran font tombol lebih kecil */
+    font-size: 10px; /* Ukuran font tombol lebih kecil */
   }
 }
 
