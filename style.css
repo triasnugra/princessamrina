@@ -125,27 +125,43 @@ h1 {
   }
 }
 
-/* Untuk layar dengan lebar maksimum 480px (handphone kecil) */
+/* Media Queries untuk layar dengan lebar maksimum 480px (handphone kecil) */
 @media (max-width: 480px) {
   .header {
-    padding: 10px; /* Kurangi padding pada header */
+    padding: 8px; /* Kurangi padding pada header untuk ruang lebih efisien */
   }
 
   .logo {
-    width: 60px; /* Perkecil ukuran logo */
+    width: 50px; /* Sesuaikan ukuran logo agar lebih kecil */
+    height: auto; /* Menjaga proporsi logo */
   }
 
   h1 {
-    font-size: 16px; /* Ukuran font lebih kecil */
+    font-size: 18px; /* Ukuran font lebih kecil untuk judul */
+    text-align: center; /* Menyelaraskan judul ke tengah */
+    padding: 5px 0; /* Menambahkan sedikit ruang pada atas dan bawah judul */
   }
 
   .menu-item {
-    font-size: 8px; /* Ukuran teks lebih kecil */
-    padding: 6px; /* Padding lebih kecil */
+    font-size: 12px; /* Ukuran font sedikit lebih besar agar mudah dibaca */
+    padding: 10px; /* Memberikan padding yang cukup agar nyaman di klik */
+    white-space: nowrap; /* Cegah teks terpotong atau terbungkus */
+    text-align: center; /* Menjaga teks tetap terpusat di dalam item */
+    margin: 5px; /* Menambah jarak antar item untuk kenyamanan */
   }
 
   .login-btn {
-    font-size: 10px; /* Ukuran font tombol lebih kecil */
+    font-size: 12px; /* Ukuran font tombol sedikit lebih besar agar mudah dibaca */
+    padding: 10px 15px; /* Memberikan padding yang lebih nyaman untuk tombol */
+    width: 100%; /* Tombol lebar penuh agar mudah dijangkau */
+    margin-top: 10px; /* Menambahkan sedikit jarak antara tombol dan elemen lain */
+  }
+
+  /* Mengoptimalkan tampilan menu untuk scroll horizontal jika diperlukan */
+  .menu {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px; /* Jarak antar item */
+    overflow-x: auto; /* Mengaktifkan scroll horizontal */
   }
 }
-
