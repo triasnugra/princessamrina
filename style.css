@@ -85,40 +85,38 @@ h1 {
 }
 
 /* Media Queries untuk Responsivitas */
-
 /* Untuk layar dengan lebar maksimum 768px (tablet dan handphone) */
 @media (max-width: 768px) {
 .menu {
-  display: flex; /* Flexbox untuk layout horizontal */
-  flex-wrap: nowrap; /* Tetap dalam satu baris */
-  overflow-x: auto; /* Scroll horizontal jika tidak muat */
-  scrollbar-width: none; /* Hilangkan scrollbar di Firefox */
-  -ms-overflow-style: none; /* Hilangkan scrollbar di IE/Edge */
-}
-
-.menu::-webkit-scrollbar {
-  display: none; /* Hilangkan scrollbar di Chrome/Safari */
+  display: flex;
+  flex-wrap: nowrap; /* Cegah elemen membungkus ke bawah */
+  gap: 10px; /* Jarak antar item */
 }
 
 .menu-item {
-  flex: 0 0 120px; /* Lebar tetap untuk semua item */
-  margin: 5px; /* Jarak antar item */
-  padding: 10px 0; /* Padding vertikal yang proporsional */
-  text-align: center; /* Teks di tengah */
-  text-decoration: none; /* Hilangkan garis bawah */
-  color: #005bac; /* Warna teks */
-  background-color: #e8f0ff; /* Warna latar belakang */
-  border-radius: 10px; /* Sudut melengkung */
-  font-size: 14px; /* Ukuran font yang pas */
-  white-space: nowrap; /* Mencegah teks turun ke baris baru */
-  box-sizing: border-box; /* Padding masuk dalam total ukuran */
+  flex: 1 0 auto; /* Lebar item sesuai isi, tidak terlalu kecil atau besar */
+  text-align: center; /* Teks berada di tengah */
+  white-space: nowrap; /* Cegah teks memotong atau membungkus */
+  padding: 10px 15px;
+  border: 1px solid #ccc; /* Opsional: Beri border untuk pemisah */
+  background-color: #f9f9f9; /* Warna latar belakang */
+  box-sizing: border-box; /* Hitung padding dalam lebar elemen */
 }
 
-.menu-item:hover {
-  background-color: #cce4ff; /* Efek hover */
+/* Media query untuk layar kecil */
+@media (max-width: 768px) {
+  .menu {
+    overflow-x: auto; /* Aktifkan pengguliran horizontal */
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0; /* Hilangkan jarak antar item jika ingin rapat */
+  }
+
+  .menu-item {
+    flex: 0 0 auto; /* Semua item memiliki lebar tetap */
+    min-width: 120px; /* Atur lebar minimum agar konsisten */
+  }
 }
-
-
 
 /* Untuk layar dengan lebar maksimum 480px (handphone kecil) */
 @media (max-width: 480px) {
