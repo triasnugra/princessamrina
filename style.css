@@ -143,15 +143,15 @@ h1 {
   }
 
   .menu-item {
-    font-size: 12px; /* Ukuran font sedikit lebih besar agar mudah dibaca */
-    padding: 10px; /* Memberikan padding yang cukup agar nyaman di klik */
+    font-size: 10px; /* Ukuran font sedikit lebih besar agar mudah dibaca */
+    padding: 8px; /* Memberikan padding yang cukup agar nyaman di klik */
     white-space: nowrap; /* Cegah teks terpotong atau terbungkus */
     text-align: center; /* Menjaga teks tetap terpusat di dalam item */
-    margin: 5px; /* Menambah jarak antar item untuk kenyamanan */
+    margin: 4px; /* Menambah jarak antar item untuk kenyamanan */
   }
 
   .login-btn {
-    font-size: 12px; /* Ukuran font tombol sedikit lebih besar agar mudah dibaca */
+    font-size: 14px; /* Ukuran font tombol sedikit lebih besar agar mudah dibaca */
     padding: 10px 15px; /* Memberikan padding yang lebih nyaman untuk tombol */
     width: 100%; /* Tombol lebar penuh agar mudah dijangkau */
     margin-top: 10px; /* Menambahkan sedikit jarak antara tombol dan elemen lain */
@@ -161,7 +161,7 @@ h1 {
   .menu {
     display: flex;
     flex-wrap: nowrap;
-    gap: 10px; /* Jarak antar item */
+    gap: 8px; /* Jarak antar item */
     overflow-x: auto; /* Mengaktifkan scroll horizontal */
   }
 }
