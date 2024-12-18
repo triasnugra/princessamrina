@@ -85,58 +85,64 @@ h1 {
 }
 
 /* Media Queries untuk Responsivitas */
+
 /* Untuk layar dengan lebar maksimum 768px (tablet dan handphone) */
 @media (max-width: 768px) {
-.menu {
-  display: flex;
-  flex-wrap: nowrap; /* Cegah elemen membungkus ke bawah */
-  gap: 10px; /* Jarak antar item */
-}
+  .container {
+    width: 90%; /* Lebar lebih fleksibel */
+    margin: auto;
+    padding: 10px;
+  }
 
-.menu-item {
-  flex: 1 0 auto; /* Lebar item sesuai isi, tidak terlalu kecil atau besar */
-  text-align: center; /* Teks berada di tengah */
-  white-space: nowrap; /* Cegah teks memotong atau membungkus */
-  padding: 10px 15px;
-  border: 1px solid #ccc; /* Opsional: Beri border untuk pemisah */
-  background-color: #f9f9f9; /* Warna latar belakang */
-  box-sizing: border-box; /* Hitung padding dalam lebar elemen */
-}
+  h1 {
+    font-size: 18px; /* Perkecil ukuran font pada judul */
+  }
 
-/* Media query untuk layar kecil */
-@media (max-width: 768px) {
   .menu {
-    overflow-x: auto; /* Aktifkan pengguliran horizontal */
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 0; /* Hilangkan jarak antar item jika ingin rapat */
+    flex-direction: column; /* Susun menu secara vertikal */
+    gap: 10px; /* Tambahkan jarak antar item menu */
   }
 
   .menu-item {
-    flex: 0 0 auto; /* Semua item memiliki lebar tetap */
-    min-width: 120px; /* Atur lebar minimum agar konsisten */
+    width: 100%; /* Lebar penuh */
+    padding: 15px; /* Ukuran padding lebih besar */
+    font-size: 14px; /* Ukuran font lebih besar */
+  }
+
+  .promo-img {
+    width: 100%; /* Banner tetap penuh lebar */
+  }
+
+  .actions {
+    flex-direction: column; /* Susun tombol secara vertikal */
+  }
+
+  .login-btn {
+    width: 100%; /* Lebar penuh */
+    padding: 12px; /* Tambahkan padding */
   }
 }
 
 /* Untuk layar dengan lebar maksimum 480px (handphone kecil) */
 @media (max-width: 480px) {
-  .menu {
-    display: flex; /* Sama seperti di tablet */
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+  .header {
+    padding: 10px; /* Kurangi padding pada header */
   }
 
-  .menu::-webkit-scrollbar {
-    display: none;
+  .logo {
+    width: 60px; /* Perkecil ukuran logo */
+  }
+
+  h1 {
+    font-size: 16px; /* Ukuran font lebih kecil */
   }
 
   .menu-item {
-    flex: 0 0 auto;
-    margin-right: 8px; /* Jarak antar item lebih kecil */
-    width: auto;
-    white-space: nowrap;
-    font-size: 11px; /* Sedikit lebih kecil di layar kecil */
+    font-size: 12px; /* Ukuran teks lebih kecil */
+    padding: 10px; /* Padding lebih kecil */
+  }
+
+  .login-btn {
+    font-size: 14px; /* Ukuran font tombol lebih kecil */
   }
 }
